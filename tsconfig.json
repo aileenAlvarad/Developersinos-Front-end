@@ -1,26 +1,67 @@
 {
+  // Compiler options for TypeScript
   "compilerOptions": {
+    // List of TypeScript libraries to include
     "lib": ["dom", "dom.iterable", "esnext"],
+    // Allow mixing JavaScript and TypeScript files
     "allowJs": true,
+    // Skip library check temporarily (consider addressing later)
     "skipLibCheck": true,
+    // Enable stricter type checking
     "strict": true,
+    // Don't emit JavaScript files (Next.js handles compilation, adjust if needed)
     "noEmit": true,
+    // Enable interop with ES modules
     "esModuleInterop": true,
+    // Use ESNext module system
     "module": "esnext",
+    // Use bundler-specific module resolution
     "moduleResolution": "bundler",
+    // Allow resolving JSON modules
     "resolveJsonModule": true,
+    // Isolate modules in the global scope
     "isolatedModules": true,
+    // Preserve JSX syntax for Next.js
     "jsx": "preserve",
+    // Enable incremental compilation
     "incremental": true,
+    // List of TypeScript plugins to use
     "plugins": [
-      {
-        "name": "next"
-      }
+      { "name": "next" } // Next.js TypeScript plugin
     ],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+
+    // ## Recommended Additional Validations
+
+    // Disallow implicit usage of the `any` type
+    "noImplicitAny": true, // Enforce explicit type definitions
+
+    // Enable stricter null checks
+    "strictNullChecks": true, // Ensure variables are a specific type or `null/undefined`
+
+    // Identify unused variables
+    "noUnusedLocals": true, // Keep code clean and maintainable
+
+    // Detect unused function parameters
+    "noUnusedParameters": true, // Prevent unnecessary code and improve code clarity
+
+    // Require explicit `return` statements
+    "noImplicitReturns": true, // Improve readability and prevent potential errors
+
+    // Root directory for resolving modules (useful for complex project structures)
+    "rootDir": "./src",
+
+    // Base URL for resolving modules (useful for organizing external dependencies)
+    "baseUrl": "./node_modules"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+
+  // List of files to include in TypeScript compilation
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+
+  // List of directories to exclude from TypeScript compilation
   "exclude": ["node_modules"]
 }

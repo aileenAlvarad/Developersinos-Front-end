@@ -34,3 +34,37 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+node_modules/
+.next/
+.cache/
+
+.env.local
+.env.development
+.env.production
+
+*.log
+npm-debug.log
+yarn-error.log
+
+coverage/
+jest/
+
+*.vscode/
+.idea/
+.project
+.bak
+.DS_Store  # macOS
+
+*.sublime-project
+*.sublime-workspace
+*.sln        # Visual Studio
+*.suo        # Visual Studio
+
+database.sqlite
+.credentials.json
+
+public/  # Carpeta pública de React
+build/    # Carpeta de build de React
+
+.chrome_devtools_storage/  # Chrome
